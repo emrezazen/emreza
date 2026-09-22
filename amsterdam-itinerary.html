@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amsterdam itinerary, 28 Oct to 1 Nov 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#EEF2F0; --surface:#FFFFFF; --ink:#18242A; --muted:#55666D;
+  --canal:#214B5C; --canal-soft:#D5E3E6; --brick:#8A3324; --ochre:#D9A441; --line:#C9D4D4;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#10191D; --surface:#172429; --ink:#E6EEEE; --muted:#9BB0B5;
+    --canal:#7FB6C6; --canal-soft:#1E343C; --brick:#E08A73; --ochre:#E5B85C; --line:#2A3D44;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10191D; --surface:#172429; --ink:#E6EEEE; --muted:#9BB0B5;
+  --canal:#7FB6C6; --canal-soft:#1E343C; --brick:#E08A73; --ochre:#E5B85C; --line:#2A3D44;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 4.5rem)}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+.wrap{max-width:52rem;margin:0 auto;padding:0 1.25rem 4rem}
+header{padding:2.5rem 0 1rem}
+.skyline{width:100%;max-width:100%;height:auto;display:block;color:var(--canal)}
+h1{font-size:clamp(2.2rem,7vw,3.6rem);line-height:1.02;font-weight:800;letter-spacing:-0.02em;margin:1.25rem 0 .5rem}
+.sub{font-size:1.15rem;color:var(--muted);margin:0;max-width:38rem}
+h2{font-size:1.35rem;font-weight:600;margin:2.5rem 0 .75rem}
+p{max-width:40rem}
+a{color:var(--canal)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}
+
+nav.days{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);
+  display:flex;gap:.4rem;overflow-x:auto;padding:.75rem 0;border-bottom:1px solid var(--line)}
+nav.days a{flex:0 0 auto;text-decoration:none;color:var(--ink);border:1px solid var(--line);
+  border-radius:999px;padding:.35rem .9rem;font-weight:600;font-size:.95rem;background:var(--surface)}
+nav.days a:hover{border-color:var(--canal)}
+
+section.day{margin-top:2.5rem}
+.dayhead{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.dayhead h2{margin:0;font-size:1.9rem;font-weight:800;letter-spacing:-0.01em}
+.theme{color:var(--brick);font-weight:600}
+.daynote{color:var(--muted);margin:.35rem 0 1rem}
+
+ol.timeline{list-style:none;margin:0;padding:0;border-left:3px solid var(--canal-soft);margin-left:3.6rem}
+.stop{position:relative;padding:0 0 1.35rem 1.25rem}
+.stop::before{content:"";position:absolute;left:-.55rem;top:.45rem;width:.8rem;height:.8rem;border-radius:50%;
+  background:var(--bg);border:3px solid var(--canal)}
+.stop.key::before{background:var(--ochre);border-color:var(--ochre)}
+.time{position:absolute;left:-4.4rem;top:.1rem;width:3.4rem;text-align:right;font-weight:600;font-size:.95rem;color:var(--canal);font-variant-numeric:tabular-nums}
+.stop h3{margin:0;font-size:1.1rem;font-weight:600}
+.stop p{margin:.15rem 0 0;color:var(--muted)}
+.links{margin-top:.35rem;font-size:.92rem;display:flex;gap:1rem;flex-wrap:wrap}
+.tag{display:inline-block;font-size:.8rem;font-weight:600;color:var(--brick);border:1px solid var(--brick);border-radius:4px;padding:0 .35rem;margin-left:.4rem;vertical-align:.1em}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.25rem}
+ul.check{list-style:none;margin:0;padding:0}
+ul.check li{display:flex;gap:.75rem;align-items:flex-start;padding:.6rem 0;border-bottom:1px solid var(--line)}
+ul.check li:last-child{border-bottom:0}
+ul.check input{width:1.2rem;height:1.2rem;margin-top:.2rem;accent-color:var(--canal);flex:0 0 auto}
+ul.check li.done span.t{text-decoration:line-through;text-decoration-color:var(--ochre);text-decoration-thickness:3px}
+.t{font-weight:600}
+.d{display:block;color:var(--muted);font-size:.93rem}
+.tips{padding-left:1.1rem}
+.tips li{margin-bottom:.55rem;max-width:40rem}
+footer{margin-top:3rem;color:var(--muted);font-size:.9rem}
+@media (max-width:540px){
+  ol.timeline{margin-left:.6rem}
+  .time{position:static;display:block;width:auto;text-align:left}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <svg class="skyline" viewBox="0 0 800 120" aria-hidden="true" fill="currentColor">
+    <path d="M0 120V70h40V40l20-25 20 25v30h10V30h8l0-12h24v12h8v40h12V45l22-22 22 22v25h8V20l10-8h30l10 8v50h14V38l18-20 18 20v32h12V28h10V16h20v12h10v42h10V48l24-26 24 26v22h8V30l16-18 16 18v40h14V34h8V22h26v12h8v36h12V44l20-22 20 22v26h10V26l12-12h24l12 12v44h14V40l18-22 18 22v30h10V30h10V18h22v12h10v40h16V46l22-24 22 24v24h14V120z" opacity=".9"/>
+    <rect x="0" y="108" width="800" height="12" fill="var(--ochre)" opacity=".55"/>
+  </svg>
+  <h1>Three days in Amsterdam</h1>
+  <p class="sub">Arrive Wednesday 28 October at 9pm, leave Sunday 1 November at 7am. Stops marked with a yellow dot need tickets booked in advance.</p>
+</header>
+
+<nav class="days" aria-label="Jump to day">
+  <a href="#wed">Wed 28</a><a href="#thu">Thu 29</a><a href="#fri">Fri 30</a><a href="#sat">Sat 31</a><a href="#sun">Sun 1</a><a href="#book">Book first</a>
+</nav>
+
+<main id="days"></main>
+
+<h2 id="book">Book before you go</h2>
+<div class="panel">
+  <ul class="check" id="bookList"></ul>
+</div>
+
+<h2>Good to know</h2>
+<ul class="tips">
+  <li>Tap in and out with a contactless bank card on trams, metro and trains. A GVB multi-day pass can work out cheaper if you use trams a lot.</li>
+  <li>Sunset is around 5:15pm at this time of year, so plan photos for late afternoon and blue hour just after.</li>
+  <li>Bring a waterproof layer; late October is often wet and windy.</li>
+  <li>Always check before ordering bitterballen or kroketten, as some are made with pork. De Pijp has many halal and pork-free options.</li>
+  <li>Walk on pavements, never in the red cycle lanes, and look both ways for bikes.</li>
+</ul>
+
+<footer>Your ticks are saved in this browser only. Opening times and ticket rules can change, so check each official site before you go.</footer>
+</div>
+
+<script>
+const map = q => 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q + ', Netherlands');
+
+const days = [
+ {id:'wed', label:'Wed 28 Oct', theme:'Arrival', note:'Keep it easy tonight.', stops:[
+  {t:'9:00pm', n:'Arrive at Schiphol', d:'Direct trains to Amsterdam Centraal take about 15 to 20 minutes and run late.', m:'Schiphol Airport', links:[['NS trains','https://www.ns.nl/en']]},
+  {t:'10:00pm', n:'Check in', d:'Drop your bags and settle in.'},
+  {t:'10:30pm', n:'Late bite and canal stroll', d:'A kapsalon or falafel from a halal snack bar, then a short walk along the lit canals.'}
+ ]},
+ {id:'thu', label:'Thu 29 Oct', theme:'Museums and canals', note:'The busiest day for walking; wear comfortable shoes.', stops:[
+  {t:'9:00am', n:'Rijksmuseum', d:'Arrive at opening to see Rembrandt\u2019s Night Watch before the crowds.', key:true, m:'Rijksmuseum Amsterdam', links:[['Tickets','https://www.rijksmuseum.nl/en']]},
+  {t:'12:00pm', n:'Vondelpark', d:'Autumn colours and good light for photos.', m:'Vondelpark Amsterdam'},
+  {t:'1:00pm', n:'Lunch at Foodhallen', d:'Indoor food hall with plenty of pork-free stalls.', m:'Foodhallen Amsterdam'},
+  {t:'2:30pm', n:'Jordaan and the Nine Streets', d:'Narrow canals, independent shops and caf\u00e9s.', m:'De Negen Straatjes Amsterdam'},
+  {t:'5:00pm', n:'Anne Frank House', d:'Timed tickets only, released online weeks ahead. Pick a slot around this time.', key:true, m:'Anne Frank Huis', links:[['Tickets','https://www.annefrank.org/en/']]},
+  {t:'6:30pm', n:'Blue hour on the canals', d:'Prinsengracht and Herengracht look their best as the lights come on.', m:'Prinsengracht Amsterdam'}
+ ]},
+ {id:'fri', label:'Fri 30 Oct', theme:'Windmills and Noord', note:'An early start pays off at Zaanse Schans.', stops:[
+  {t:'9:00am', n:'Zaanse Schans windmills', d:'Train from Centraal to Zaandijk Zaanse Schans, about 20 minutes, then a short walk.', m:'Zaanse Schans', links:[['Visitor info','https://www.zaanseschans.nl/en/']]},
+  {t:'1:00pm', n:'Back to Amsterdam', d:'Lunch near Centraal.', m:'Amsterdam Centraal'},
+  {t:'2:30pm', n:'Free ferry to Noord', d:'Ferries leave every few minutes from behind Centraal.', m:'Buiksloterweg ferry Amsterdam', links:[['GVB','https://www.gvb.nl/en']]},
+  {t:'3:00pm', n:'A\u2019DAM Lookout', d:'Rooftop views across the city and the IJ.', m:'A\'DAM Lookout', links:[['Tickets','https://www.adamlookout.com/']]},
+  {t:'4:30pm', n:'NDSM Wharf', d:'Former shipyard with street art and creative spaces.', m:'NDSM Wharf Amsterdam'},
+  {t:'7:00pm', n:'Evening canal cruise', d:'The bridges are lit up after dark. Book a slot in advance.', key:true, m:'Canal cruise Amsterdam Centraal'}
+ ]},
+ {id:'sat', label:'Sat 31 Oct', theme:'Markets and the old centre', note:'Finish early; tomorrow starts before dawn.', stops:[
+  {t:'9:30am', n:'Albert Cuyp Market, De Pijp', d:'Fresh stroopwafels and Dutch cheese. Saturday is the liveliest day.', m:'Albert Cuypmarkt'},
+  {t:'11:30am', n:'Van Gogh Museum', d:'Timed tickets essential.', key:true, m:'Van Gogh Museum', links:[['Tickets','https://www.vangoghmuseum.nl/en']]},
+  {t:'2:00pm', n:'Bloemenmarkt', d:'The floating flower market on the Singel.', m:'Bloemenmarkt Amsterdam'},
+  {t:'2:45pm', n:'Begijnhof', d:'A quiet hidden courtyard just off the busy Kalverstraat.', m:'Begijnhof Amsterdam'},
+  {t:'3:30pm', n:'Dam Square and Beurs van Berlage', d:'The historic exchange building, a reminder of Amsterdam\u2019s place in the history of stock markets.', m:'Beurs van Berlage'},
+  {t:'5:30pm', n:'Reguliersgracht', d:'The seven bridges view is a classic sunset photo.', m:'Reguliersgracht Amsterdam'},
+  {t:'7:30pm', n:'Farewell dinner and pack', d:'Try an Indonesian rijsttafel, then an early night.', m:'Indonesian restaurant Amsterdam'}
+ ]},
+ {id:'sun', label:'Sun 1 Nov', theme:'Departure', note:'If 7am is a train rather than a flight, leave around 6:15am instead.', stops:[
+  {t:'4:15am', n:'Check out', d:'Trains between Centraal and Schiphol run through the night.', links:[['NS journey planner','https://www.ns.nl/en']]},
+  {t:'5:00am', n:'Schiphol Airport', d:'Aim to arrive about two hours before a 7:00am flight.', m:'Schiphol Airport'}
+ ]}
+];
+
+const bookings = [
+  {id:'b-anne', t:'Anne Frank House', d:'Thursday, around 5pm. Tickets are released online weeks ahead and go quickly.', u:'https://www.annefrank.org/en/'},
+  {id:'b-rijks', t:'Rijksmuseum', d:'Thursday, 9am opening slot.', u:'https://www.rijksmuseum.nl/en'},
+  {id:'b-vg', t:'Van Gogh Museum', d:'Saturday, around 11:30am.', u:'https://www.vangoghmuseum.nl/en'},
+  {id:'b-cruise', t:'Evening canal cruise', d:'Friday, around 7pm.'},
+  {id:'b-lookout', t:'A\u2019DAM Lookout', d:'Optional; online tickets can be cheaper than at the door.', u:'https://www.adamlookout.com/'},
+  {id:'b-hotel', t:'Accommodation', d:'Four nights, with free cancellation.', u:'https://claude.ai/artifact/8PAGoLnYoQQXgnrkecUNoE', ul:'Stay finder'}
+];
+
+const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const main = document.getElementById('days');
+for(const day of days){
+  const sec = document.createElement('section');
+  sec.className = 'day'; sec.id = day.id;
+  sec.innerHTML = `<div class="dayhead"><h2>${day.label}</h2><span class="theme">${day.theme}</span></div>
+    <p class="daynote">${day.note}</p>
+    <ol class="timeline">${day.stops.map(s=>`
+      <li class="stop${s.key?' key':''}">
+        <span class="time">${s.t}</span>
+        <h3>${esc(s.n)}${s.key?'<span class="tag">Book ahead</span>':''}</h3>
+        <p>${esc(s.d)}</p>
+        ${(s.m||s.links)?`<div class="links">${s.m?`<a href="${map(s.m)}" target="_blank" rel="noopener">Map</a>`:''}${(s.links||[]).map(l=>`<a href="${l[1]}" target="_blank" rel="noopener">${l[0]}</a>`).join('')}</div>`:''}
+      </li>`).join('')}
+    </ol>`;
+  main.appendChild(sec);
+}
+
+let checked = {};
+try{ checked = JSON.parse(localStorage.getItem('ams-itin')) || {}; }catch(e){}
+const bl = document.getElementById('bookList');
+for(const b of bookings){
+  const li = document.createElement('li');
+  li.className = checked[b.id] ? 'done' : '';
+  li.innerHTML = `<input type="checkbox" id="${b.id}" ${checked[b.id]?'checked':''}>
+    <label for="${b.id}"><span class="t">${b.t}</span><span class="d">${b.d}${b.u?` <a href="${b.u}" target="_blank" rel="noopener">${b.ul||'Official site'}</a>`:''}</span></label>`;
+  li.querySelector('input').addEventListener('change', e=>{
+    checked[b.id] = e.target.checked; li.classList.toggle('done', e.target.checked);
+    try{ localStorage.setItem('ams-itin', JSON.stringify(checked)); }catch(err){}
+  });
+  bl.appendChild(li);
+}
+</script>
+</body>
+</html>
